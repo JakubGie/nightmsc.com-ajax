@@ -1,0 +1,80 @@
+body
+{
+    background-color: rgb(10, 10, 10);
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2
+{
+    margin-top: 40px;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+img.logo
+{
+    width: 400px;
+    margin-top: 30px;
+}
+
+form input, textarea
+{
+    width: 340px;
+}
+
+textarea
+{
+    min-height: 25px;
+}
+
+form input[type="text"], textarea
+{
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    font-size: 25px;
+    outline: none;
+    border: none;
+    background-color: rgb(10, 10, 10);
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+form input[type="submit"]
+{
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: rgb(20, 20, 20);
+    transition: .15s;
+}
+
+form input[type="submit"]:hover
+{
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+@media screen and (max-width:500px)
+{
+	img.logo
+    {
+        width: 270px;
+    }
+
+    form input, textarea
+    {
+        width: 100%;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
