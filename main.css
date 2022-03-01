@@ -6,6 +6,11 @@ body
     font-family: 'Montserrat', sans-serif;
 }
 
+*
+{
+    transition: .15s;
+}
+
 h2
 {
     margin-top: 40px;
@@ -20,9 +25,25 @@ img.logo
     margin-top: 30px;
 }
 
-form input, textarea
+.form input, textarea
 {
     width: 340px;
+}
+
+.form
+{
+    width: 400px;
+    margin: auto;
+}
+
+a
+{
+    color: #fff;
+}
+
+a:hover
+{
+    color: #fff;
 }
 
 textarea
@@ -30,7 +51,7 @@ textarea
     min-height: 25px;
 }
 
-form input[type="text"], textarea
+.form input[type="text"], textarea
 {
     margin: auto;
     margin-top: 10px;
@@ -43,7 +64,7 @@ form input[type="text"], textarea
     color: #fff;
 }
 
-form input[type="submit"]
+.form input[type="submit"]
 {
     margin: auto;
     margin-top: 10px;
@@ -54,10 +75,14 @@ form input[type="submit"]
     background-color: #fff;
     border: 2px solid #fff;
     color: rgb(20, 20, 20);
-    transition: .15s;
 }
 
-form input[type="submit"]:hover
+.form input[type="submit"]:active
+{
+    font-weight: 700;
+}
+
+.form input[type="submit"]:hover
 {
     background: none;
     border: 2px solid #fff;
@@ -71,11 +96,16 @@ form input[type="submit"]:hover
         width: 270px;
     }
 
-    form input, textarea
+    .form input, textarea
     {
         width: 100%;
         padding-left: 25px !important;
         padding-right: 25px !important;
+    }
+
+    .form
+    {
+        width: auto !important;
     }
 }
 
@@ -93,3 +123,17 @@ form input[type="submit"]:hover
     vertical-align: middle;
     padding-bottom: 5%;
   }
+
+.resultError
+{
+    color: #ff141c;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.resultSuccess
+{
+    color: #208812;
+    font-size: 20px;
+    margin-top: 5px;
+}
