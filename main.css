@@ -75,11 +75,13 @@ textarea
     background-color: #fff;
     border: 2px solid #fff;
     color: rgb(20, 20, 20);
+    letter-spacing: 2px;
 }
 
 .form input[type="submit"]:active
 {
     font-weight: 700;
+    letter-spacing: 0;
 }
 
 .form input[type="submit"]:hover
@@ -93,7 +95,7 @@ textarea
 {
 	img.logo
     {
-        width: 270px;
+        width: 240px;
     }
 
     .form input, textarea
@@ -106,6 +108,13 @@ textarea
     .form
     {
         width: auto !important;
+    }
+
+    .form input[type="submit"]:hover
+    {
+        background: #fff;
+        border: 2px solid #fff;
+        color: rgb(10, 10, 10);
     }
 }
 
@@ -128,12 +137,18 @@ textarea
 {
     color: #ff141c;
     font-size: 20px;
-    margin-top: 3px;
+    
 }
 
 .resultSuccess
 {
     color: #208812;
     font-size: 20px;
+    
+}
+
+.result
+{
+    height: 27px;
     margin-top: 5px;
 }
