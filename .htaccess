@@ -9,3 +9,4 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteRule admin admin.php
+RewriteRule spotify https://open.spotify.com/user/31oxwumjninhooixyo2kcvrigapu
