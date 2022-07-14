@@ -11,6 +11,7 @@
             $link = $_POST['link'];
             $adInfo = $_POST['adInfo'];
             $ip = $_SERVER['REMOTE_ADDR'];
+            $date = date("Y-m-d, H:i");
 
 
             $artistName = htmlentities($artistName, ENT_QUOTES, "UTF-8");
@@ -31,14 +32,14 @@
 
             if($isOk=="")
             {
-                if($rezultat = @$polaczenie->query('SELECT id FROM tracks ORDER BY id DESC LIMIT 1'))
+                if($rezultat = @$connection->query('SELECT id FROM tracks ORDER BY id DESC LIMIT 1'))
                 {
                     $wiersz = $rezultat->fetch_assoc();
                     $id = $wiersz['id'] + 1;
                     $rezultat->close();
                 }
 
-                if($polaczenie->query("INSERT INTO tracks VALUES('$id', '$artistName', '$email', '$songName', '$link', '$adInfo', '$ip')"))
+                if($connection->query("INSERT INTO tracks VALUES('$id', '$artistName', '$email', '$songName', '$link', '$adInfo', '$ip', '$date')"))
                 {
                     echo '<div class="resultSuccess">You submitted your track! We will response you at <b>'.$email.'</b></div>';
                     echo '
@@ -63,13 +64,13 @@
 
     function loadAdminPanel()
     {
-        global $polaczenie;
+        global $connection;
 
-        $zapytanie = $polaczenie->query("SELECT * FROM tracks");
+        $request = $connection->query("SELECT * FROM tracks");
 
-        for($i=1;$i<=$zapytanie->num_rows;$i++)
+        for($i=1;$i<=$request->num_rows;$i++)
         {
-            $row = $zapytanie->fetch_assoc();
+            $row = $request->fetch_assoc();
 
             $id = $row['id'];
             $artistName = $row['artistName'];
